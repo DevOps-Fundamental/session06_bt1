@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 500" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="940" height="500" fill="rgb(15, 23, 42)" rx="10" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+  <!-- Top bar -->
+  <rect width="940" height="42" fill="rgb(30, 41, 59)" rx="10"/>
+  <rect y="32" width="940" height="10" fill="rgb(30, 41, 59)"/>
+  <circle cx="22" cy="21" r="6" fill="#ef4444"/>
+  <circle cx="40" cy="21" r="6" fill="#f59e0b"/>
+  <circle cx="58" cy="21" r="6" fill="#22c55e"/>
+  <text x="310" y="26" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">
+    Kien Truc Phan Quyen Linux FHS: /var/www/my-app
+  </text>
+
+  <!-- Left: Directory Hierarchy Tree -->
+  <g transform="translate(40, 70)">
+    <rect width="360" height="390" rx="10" fill="rgba(30, 41, 59, 0.6)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="25" y="35" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="15" font-weight="700">Cay Thu Muc Linux FHS</text>
+
+    <!-- /var/www root -->
+    <g transform="translate(25, 60)">
+      <rect width="310" height="45" rx="6" fill="rgba(15, 23, 42, 0.8)"/>
+      <text x="15" y="28" fill="#38bdf8" font-family="'Consolas', monospace" font-size="13">/var/www/my-app</text>
+      <text x="230" y="28" fill="#94a3b8" font-family="'Consolas', monospace" font-size="11">755 (drwxr-xr-x)</text>
+    </g>
+
+    <!-- Branch line 1 to public -->
+    <path d="M40 105 L40 160 L60 160" stroke="#94a3b8" stroke-width="2" fill="none"/>
+    <g transform="translate(60, 140)">
+      <rect width="275" height="70" rx="6" fill="rgba(56, 189, 248, 0.15)" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="15" y="26" fill="#ffffff" font-family="'Consolas', monospace" font-size="14" font-weight="700">public/</text>
+      <text x="15" y="46" fill="#38bdf8" font-family="'Consolas', monospace" font-size="12">drwxr-x--- (750)</text>
+      <text x="15" y="62" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="10">Chua ma nguon tinh (Static Web)</text>
+    </g>
+
+    <!-- Branch line 2 to logs -->
+    <path d="M40 105 L40 260 L60 260" stroke="#94a3b8" stroke-width="2" fill="none"/>
+    <g transform="translate(60, 240)">
+      <rect width="275" height="70" rx="6" fill="rgba(34, 197, 94, 0.15)" stroke="#22c55e" stroke-width="1.5"/>
+      <text x="15" y="26" fill="#ffffff" font-family="'Consolas', monospace" font-size="14" font-weight="700">logs/</text>
+      <text x="15" y="46" fill="#22c55e" font-family="'Consolas', monospace" font-size="12">drwxrwx--- (770)</text>
+      <text x="15" y="62" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="10">Nhat ky he thong ghi boi Web Server</text>
+    </g>
+
+    <!-- Ownership note -->
+    <g transform="translate(25, 340)">
+      <rect width="310" height="35" rx="6" fill="rgba(245, 158, 11, 0.15)" stroke="#f59e0b" stroke-width="1"/>
+      <text x="15" y="22" fill="#fbbf24" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Owner: devops &bull; Group: www-data</text>
+    </g>
+  </g>
+
+  <!-- Right: Permission Bits Breakdown -->
+  <g transform="translate(430, 70)">
+    <rect width="470" height="390" rx="10" fill="rgba(30, 41, 59, 0.6)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="25" y="35" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="15" font-weight="700">Chi Tiet Bit Phan Quyen (Octal &amp; Symbolic)</text>
+
+    <!-- Box 1: 750 Breakdown -->
+    <g transform="translate(25, 60)">
+      <rect width="420" height="135" rx="8" fill="rgba(15, 23, 42, 0.7)" stroke="#38bdf8" stroke-width="1"/>
+      <text x="15" y="26" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="13" font-weight="700">1. Thu muc public/ &gt; Quyen 750 (drwxr-x---)</text>
+
+      <g transform="translate(15, 45)">
+        <!-- Owner 7 -->
+        <rect x="0" y="0" width="120" height="55" rx="4" fill="rgba(34, 197, 94, 0.2)"/>
+        <text x="60" y="22" text-anchor="middle" fill="#22c55e" font-family="'Consolas', monospace" font-size="14" font-weight="bold">rwx (7)</text>
+        <text x="60" y="42" text-anchor="middle" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="10">Owner (devops)</text>
+
+        <!-- Group 5 -->
+        <rect x="135" y="0" width="120" height="55" rx="4" fill="rgba(56, 189, 248, 0.2)"/>
+        <text x="195" y="22" text-anchor="middle" fill="#38bdf8" font-family="'Consolas', monospace" font-size="14" font-weight="bold">r-x (5)</text>
+        <text x="195" y="42" text-anchor="middle" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="10">Group (www-data)</text>
+
+        <!-- Others 0 -->
+        <rect x="270" y="0" width="120" height="55" rx="4" fill="rgba(239, 68, 68, 0.2)"/>
+        <text x="330" y="22" text-anchor="middle" fill="#ef4444" font-family="'Consolas', monospace" font-size="14" font-weight="bold">--- (0)</text>
+        <text x="330" y="42" text-anchor="middle" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="10">Others (Cam het)</text>
+      </g>
+      <text x="15" y="122" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Ket qua: Web Server doc va phuc vu file, nguoi la khong the truy cap.</text>
+    </g>
+
+    <!-- Box 2: 770 Breakdown -->
+    <g transform="translate(25, 215)">
+      <rect width="420" height="135" rx="8" fill="rgba(15, 23, 42, 0.7)" stroke="#22c55e" stroke-width="1"/>
+      <text x="15" y="26" fill="#22c55e" font-family="'Inter', sans-serif" font-size="13" font-weight="700">2. Thu muc logs/ &gt; Quyen 770 (drwxrwx---)</text>
+
+      <g transform="translate(15, 45)">
+        <!-- Owner 7 -->
+        <rect x="0" y="0" width="120" height="55" rx="4" fill="rgba(34, 197, 94, 0.2)"/>
+        <text x="60" y="22" text-anchor="middle" fill="#22c55e" font-family="'Consolas', monospace" font-size="14" font-weight="bold">rwx (7)</text>
+        <text x="60" y="42" text-anchor="middle" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="10">Owner (devops)</text>
+
+        <!-- Group 7 -->
+        <rect x="135" y="0" width="120" height="55" rx="4" fill="rgba(34, 197, 94, 0.2)"/>
+        <text x="195" y="22" text-anchor="middle" fill="#22c55e" font-family="'Consolas', monospace" font-size="14" font-weight="bold">rwx (7)</text>
+        <text x="195" y="42" text-anchor="middle" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="10">Group (www-data)</text>
+
+        <!-- Others 0 -->
+        <rect x="270" y="0" width="120" height="55" rx="4" fill="rgba(239, 68, 68, 0.2)"/>
+        <text x="330" y="22" text-anchor="middle" fill="#ef4444" font-family="'Consolas', monospace" font-size="14" font-weight="bold">--- (0)</text>
+        <text x="330" y="42" text-anchor="middle" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="10">Others (Cam het)</text>
+      </g>
+      <text x="15" y="122" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Ket qua: Web Server ghi nhat ky vao logs, nguoi dung he thong khong xem trom.</text>
+    </g>
+  </g>
+</svg>
